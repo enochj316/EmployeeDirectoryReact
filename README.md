@@ -18,7 +18,7 @@ For this assignment, I had to create an employee directory with React. This assi
 
 ## Preview
 
-
+![Site](public/demo.png)
 
 ## Usage
 
@@ -27,5 +27,8 @@ For this assignment, I had to create an employee directory with React. This assi
 
 ## License
 
-This project is licensed under the MIT license.
+</br>
+<p align="center">
+    <img align="center" src="https://img.shields.io/github/license/kqarlos/fitness-tracker?style=for-the-badge" alt="MIT license" />
+</p>
 
