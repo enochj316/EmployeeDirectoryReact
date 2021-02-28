@@ -3,7 +3,7 @@
 
 ## Description
 
-For this assignment, I had to create an employee directory with React. This assignment required me to break up the application's UI into components, manage component state, and respond to user events. Employee data was generated with the [randomuser.me API](https://randomuser.me).
+For this assignment, I had to create an employee directory with React. This required me to break up the application's UI into components, manage component state, and respond to user events. Employee data was generated with the [randomuser.me API](https://randomuser.me).
 
 ## Table of Contents
 
