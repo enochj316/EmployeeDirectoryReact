@@ -33,13 +33,13 @@ const DataArea = () => {
 
     const compareFnc = (a, b) => {
       if (currentOrder === "ascend") {
-        // account for missing values
+
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+
         else if (heading === "name") {
           return a[heading].first.localeCompare(b[heading].first);
         } else if (heading === "dob") {
@@ -48,18 +48,18 @@ const DataArea = () => {
           return a[heading].localeCompare(b[heading]);
         }
       } else {
-        // account for missing values
+
         if (a[heading] === undefined) {
           return 1;
         } else if (b[heading] === undefined) {
           return -1;
         }
-        // numerically
+
         else if (heading === "name") {
           return b[heading].first.localeCompare(a[heading].first);
-        }else if (heading === "dob") {
+        } else if (heading === "dob") {
           return b[heading].age - a[heading].age;
-        }  else {
+        } else {
           return b[heading].localeCompare(a[heading]);
         }
       }
@@ -82,15 +82,15 @@ const DataArea = () => {
     const filteredList = developerState.users.filter(item => {
       let values = item.name.first.toLowerCase() + " " + item.name.last.toLowerCase();
       console.log(filter, values)
-    if(values.indexOf(filter.toLowerCase()) !== -1){
-      return item
-    };
+      if (values.indexOf(filter.toLowerCase()) !== -1) {
+        return item
+      };
     });
 
     setDeveloperState({ ...developerState, filteredUsers: filteredList });
   };
 
-  ///https://stackoverflow.com/questions/53120972/how-to-call-loading-function-with-react-useeffect-only-once
+
   useEffect(() => {
     API.getUsers().then(results => {
       console.log(results.data.results);
